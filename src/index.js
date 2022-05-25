@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import Segment from "./Segment";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const App = () => {
+    return (
+        <div>
+            <Segment>
+                <div className="ui icon header">
+                    <i className="pdf file outline icon"></i>
+                    Error: PDF not found.
+                </div>
+                <div className="ui primary button"> Go back </div>
+            </Segment>
+            <Segment>
+                <h4 className="ui header"> Attention ! </h4>
+                <p> Lorem Ipsum Dolor Ipset </p>
+            </Segment>
+        </div>
+    );
+};
+
+ReactDOM.render(
+    <App/>,
+    document.querySelector("#root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
